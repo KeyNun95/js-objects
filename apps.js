@@ -1,8 +1,8 @@
-Copy the code below into the repl that you created.
+//Copy the code below into the repl that you created.
 
-Solve each exercise as described.
+//Solve each exercise as described.
 
-Do not change any of the existing code.
+//Do not change any of the existing code.
 
 const album1 = {
   title: 'Talking Heads',
@@ -15,12 +15,14 @@ const album1 = {
 
 // Exercise 1:  Update the title property of album1 from 'Talking Heads' to 'Talking Heads - 77', then assign that property to a variable named title
 
-
+album1.title = 'Talking Heads - 77';
+console.log(album1);
 
 
 // Exercise 2: Assign the string 'Sire' from album1 to a variable named label
 
-
+let label = album1.albumDetails.label;
+console.log(label);
 
 
 const album2 = {
@@ -43,8 +45,8 @@ const album3 = {
 
 // Exercise 3: Accessing the string 'LP' from album2's formats array, add it to the end of album3's formats array.
 
-
-
+album3.albumDetails.formats.push(album2.albumDetails.formats[0]);
+console.log(album3);
 
 // Exercise 4:  Update the released property of album3 from a string into a Date object using that string
 
@@ -61,7 +63,8 @@ const album4 = {
 
 // Exercise 5:  Add a property named label with the value 'Sire' to album4's albumDetails property
 
-
+album4.albumDetails.label = 'Sire';
+console.log(album4);
 
 
 const album5 = {
@@ -89,7 +92,8 @@ const album6 = {
 
 // Exercise 7:  Assign album6's formats array to a variable named formats
 
-
+let formats = album6.albumDetails.formats;
+console.log(formats);
 
 
 const album7 = {
@@ -124,34 +128,3 @@ const talkingHeadsAlbums = [
 // Exercise 10:  Using the pre-defined variable named albumIdx below, assign the albumDetails object of the album located within the talkingHeadsAlbums array at the index represented by the value of albumIdx to a variable named albumDetails
 
 let albumIdx = 4;
-
-
-
-
-/********** Don't look below here **********/
-
-console.log('Exercise 1:', title);
-console.log('Exercise 2:', label);
-console.log('Exercise 3:', album3.albumDetails.formats[1]);
-console.log('Exercise 4:', album3.albumDetails.released.toLocaleDateString());
-console.log('Exercise 5:', album4.albumDetails.label);
-console.log('Exercise 6:', album5.albumDetails.labels[1]);
-console.log('Exercise 7:', formats);
-console.log('Exercise 8:', labels);
-console.log('Exercise 9:', talkingHeadsAlbums[5].albumDetails.released.toLocaleDateString());
-console.log('Exercise 10:', albumDetails);
-When ran, the console should show the following:
-Exercise 1: Talking Heads - 77
-Exercise 2: Sire
-Exercise 3: LP
-Exercise 4: 8/3/1979
-Exercise 5: Sire
-Exercise 6: EMI
-Exercise 7: [ 'CD', 'cassette', 'LP' ]
-Exercise 8: [ 'Sire', 'EMI' ]
-Exercise 9: 3/15/1988
-Exercise 10: {
-  released: 1985-06-10T00:00:00.000Z,   // Format of date/time may vary due to browser & timezone
-  labels: [ 'Sire', 'EMI' ],
-  formats: [ 'CD', 'cassette', 'LP' ]
-}
