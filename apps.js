@@ -50,7 +50,9 @@ console.log(album3);
 
 // Exercise 4:  Update the released property of album3 from a string into a Date object using that string
 
-
+let release = new Date(album3.albumDetails.released);
+album3.albumDetails.released = release.toLocaleDateString();
+console.log(album3.albumDetails.released);
 
 
 const album4 = {
@@ -123,9 +125,13 @@ console.log(labels);
 
 // Exercise 9:  Using the talkingHeadsAlbums array, assign album7's released property to album6's released property
 
-talkingHeadsAlbums[5].albumDetails.released = talkingHeadsAlbums[6].albumDetails.released
-console.log(talkingHeadsAlbums[5].albumDetails.released)
+let newRelease = talkingHeadsAlbums[6].albumDetails.released.toLocaleDateString();
+talkingHeadsAlbums[5].albumDetails.released = newRelease;
+console.log(talkingHeadsAlbums[5].albumDetails.released);
+
 
 // Exercise 10:  Using the pre-defined variable named albumIdx below, assign the albumDetails object of the album located within the talkingHeadsAlbums array at the index represented by the value of albumIdx to a variable named albumDetails
 
 let albumIdx = 4;
+let albumDetails = talkingHeadsAlbums[albumIdx].albumDetails;
+console.log(albumDetails);
